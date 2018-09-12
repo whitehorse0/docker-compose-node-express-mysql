@@ -1,0 +1,15 @@
+version: '3'
+services:
+  db:
+    build: ./database-service
+  app:
+    build: ./application-service
+    ports:
+      - "9090:9090"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_HOST=db
+    volumes:
+      - ./application-service/api:/app/api
+  
