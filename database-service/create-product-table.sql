@@ -6,7 +6,6 @@ CREATE TABLE product (
   tax_id  INT(5)                             NULL
 ) ENGINE = INNODB;
 
-/* INSERT DATA */
 INSERT INTO product (name, label, amount, tax_id)
 VALUES ('big-mac', 'Big Mac', 1000, 1),
        ('lucky-stretch', 'Lucky Stretch', 1000, 2),

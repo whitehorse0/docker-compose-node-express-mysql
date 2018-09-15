@@ -1,9 +1,20 @@
-var express = require("express")
+var express = require('express')
 var bodyParser = require('body-parser')
+const bill = require('./routes/bill')
+const taxs = require('./routes/tax')
+const product = require('./routes/product')
+const order = require('./routes/order')
 var app = express()
 
+app.set('view engine', 'ejs')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static("public"))
 
-app.listen(9090);
+app.use('/', bill)
+app.use('/taxs', taxs)
+app.use('/products', product)
+app.use('/products/tax', product)
+app.use('/orders', order)
+
+app.listen(9090, () => console.log('Server running...'))

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Docker Node Express Mysql</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    table {
+      border-spacing: 5px;
+    }
+    th, td {
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Tax Calculator</h1>
+  <h4>Bill:</h4>
+  <table style="width:80%;">
+    <tr>
+      <th>Name</th>
+      <th>Tax Code</th> 
+      <th>Type</th>
+      <th>Amount</th>
+      <th>Tax Amount</th>
+      <th>Total Amount</th>
+    </tr>
+    <% products.item.forEach(function(product) { %>
+      <tr align="center">
+        <td><%= product.label %></td>
+        <td><%= product.tax_id %></td>
+        <td><%= product.tax_label %></td>
+        <td><%= product.amount %></td>
+        <td><%= product.tax_amount %></td>
+        <td><%= product.total_amount %></td>
+      </tr>
+    <% }); %>
+  </table>
+  <ul>
+    <li>Total Amount: <%= products.total_amount %></li>
+    <li>Total Tax Amount: <%= products.total_tax_amount %></li>
+    <li>Grand Total: <%= products.grand_amount %></li>
+  </ul>
+</body>
+
+</html>
