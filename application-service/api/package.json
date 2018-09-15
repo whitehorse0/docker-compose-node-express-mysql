@@ -4,7 +4,7 @@
   "description": "Application service container",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "eka378putra@gmail.com",
@@ -13,6 +13,10 @@
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
+    "morgan": "^1.9.1",
     "mysql": "^2.16.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
   }
 }
