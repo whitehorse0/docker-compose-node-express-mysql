@@ -103,7 +103,7 @@ router.get('/orders', order.list())
 
 ## Route Groups
 
-Route groups allow you to share route attributes, such as middleware or namespaces, across a large number of routes without needing to define those attributes on each individual route. Shared attributes are specified in an array format as the first parameter to the `$router->group` method.
+Route groups allow you to share route attributes, such as middleware or namespaces, across a large number of routes without needing to define those attributes on each individual route.
 
 <a name="route-group-prefixes"></a>
 
@@ -121,7 +121,7 @@ router.use('/', index)
 
 app.use('/api/v1', router)
 ```
-For more information about Plates, see [here](http://expressjs.com/en/guide/routing.html).
+For more information about routes, see [here](http://expressjs.com/en/guide/routing.html).
 
 ---
 
