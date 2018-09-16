@@ -64,7 +64,7 @@ docker-compose up
 You will define all of the routes for your application in the `routes/index.js` file. The most basic routes simply accept a URI and a `Closure`:
 
 
-```sh
+```javascript
 const express = require('express')
 const router = express.Router()
 
@@ -88,7 +88,7 @@ route.get('/foo', function (req, res, next) {
 
 The router allows you to register routes that respond to any HTTP verb:
 
-```sh
+```javascript
 const express = require('express')
 const router = express.Router()
 
@@ -111,7 +111,7 @@ Route groups allow you to share route attributes, such as middleware or namespac
 
 The `prefix` group attribute may be used to prefix each route in the group with a given URI. For example, you may want to prefix all route URIs within the group with `api`:
 
-```sh
+```javascript
 const express = require('express')
 const router = express.Router()
 const index = require('./routes/index')
